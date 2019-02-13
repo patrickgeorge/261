@@ -1,0 +1,15 @@
+INSERT INTO clients (clientFirstname, clientLastname, clientEmail, clientPassword, comments)
+VALUES ('Tony', 'Stark', 'tony@starkent.com', 'Iam1ronM@n', 'I am the real Ironman')
+
+UPDATE clients SET clientLevel = 3 WHERE clientFirstname = 'Tony' 
+
+Update inventory
+Set    invName = replace(invName, 'Nylon', 'Climbing')
+
+SELECT inventory.invName, categories.categoryName
+FROM inventory
+INNER JOIN categories
+ON inventory.categoryId = categories.categoryId
+WHERE categoryName = 'Misc';
+
+DELETE FROM inventory WHERE invName = 'Koenigsegg CCX Car' 
